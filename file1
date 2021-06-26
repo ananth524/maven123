@@ -2,4 +2,10 @@ aa
 aaa
 bbb
 hi how are you
+<<<<<<< HEAD
 good eveving
+=======
+ggof bye
+good evening
+>>>>>>> cfc79603118cebcea380fe3d1bd9f24daa618786
+gooe veneing
