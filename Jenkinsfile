@@ -9,8 +9,9 @@ node('master')
         sh 'mvn package'
     }
     stage('ContinuousDeployment-master')
-    {
-sh 'scp /home/ubuntu/.jenkins/workspace/MultibranchPipeline_main/webapp/target/webapp.war ubuntu@172.31.89.180:/var/lib/tomcat9/webapps/testapp.war'
+   {
+deploy adapters: [tomcat9(credentialsId: 'a120a0bc-3670-4590-9aae-ef0fd2fa0526', path: '', url: 'http://172.31.89.180:8080')], contextPath: 'testapp', war: '**/*.war'
+            
     }
     stage('ContinuousTesting-master')
     {
