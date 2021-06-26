@@ -16,6 +16,6 @@ deploy adapters: [tomcat9(credentialsId: 'a120a0bc-3670-4590-9aae-ef0fd2fa0526',
     stage('ContinuousTesting-master')
     {
         git 'https://github.com/intelliqittrainings/FunctionalTesting.git'
-        sh 'java -jar /home/ubuntu/.jenkins/workspace/ScriptedPipeline/testing.jar'
+        sh 'java -jar /home/ubuntu/.jenkins/workspace/MultibranchPipeline_main/testing.jar'
     }
 }    
