@@ -10,7 +10,7 @@ node('master')
     }
     stage('ContinuousDeployment-master')
     {
-sh 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war ubuntu@172.31.89.180:/var/lib/tomcat9/webapps/testapp.war'
+sh 'scp /home/ubuntu/.jenkins/workspace/MultibranchPipeline_main/webapp/target/webapp.war ubuntu@172.31.89.180:/var/lib/tomcat9/webapps/testapp.war'
     }
     stage('ContinuousTesting-master')
     {
